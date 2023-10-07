@@ -1,4 +1,7 @@
 # Team-5
 
-# Setup DB
-1. Create tables in local database `npx prisma db push`
+# Setup
+1. `npx prisma db push`
+2. `npx prisma generate`
+3. `npm run seed`
+4. `npm run start`

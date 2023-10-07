@@ -1,7 +1,7 @@
 import { createLogger, format, transports } from "winston";
 
 const logger = createLogger({
-    level: '1',
+    level: '0',
     format: format.combine(
         format.timestamp({
             format: 'YYYY-MM-DD HH:mm:ss'
@@ -14,7 +14,7 @@ const logger = createLogger({
     transports: [
         new transports.File({
             filename: '/tmp/log.txt',
-            level: '1'
+            level: '0'
         })
     ]
 });
