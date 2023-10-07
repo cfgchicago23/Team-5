@@ -6,16 +6,15 @@ function createDirIfNotExist(dir: string) {
     }
 }
 
-function findAvailableFileName(dir: string, filename: string) {
-    const baseName = filename.split('.')[0];
+function findAvailableFileName(dir: string, prefix: string) {
     const takenNumbers = fs.readdirSync(dir, { withFileTypes: true })
-        .filter(f => f.isDirectory())
-        .filter(f => f.name.startsWith(baseName))
-        .map(swdir => swdir.name.slice(-1))
-        .map(parseInt);
-
+        .filter(f => f.name.startsWith(prefix))
+        .map(f => f.name.split("_")[1]);
+    
     let number = 0;
     while (number++ in takenNumbers);
+
+    return prefix + "_" + number;
 }
 
 export {
