@@ -141,7 +141,7 @@ html, body {
   width: 100%;
 	padding-top: 50px;
 	background-color: #f0f3fa;
-	padding-bottom: 60px;
+	padding-bottom: 0px;
 }
 
 .recent-event-heading {
@@ -211,14 +211,27 @@ html, body {
 }
 
 #current-events-button{
-  padding: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
 }
 #past-events-button{
-  padding: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:#f0f3fa;
 }
+
 
 #past-event-id{
   display:none;
+}
+
+.event-buttons{
+  justify-content: center;
+  text-align: center;
+
 }
 
 /*****FEED*****/
