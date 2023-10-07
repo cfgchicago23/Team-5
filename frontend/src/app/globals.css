@@ -313,6 +313,16 @@ html, body {
 
 /****RESOURCES****/
 
+.past-events{
+  margin-left: 20px;
+}
+
+.current-events{
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+
 .resourcesContainer {
   display:flex;
   flex-direction: column;
@@ -408,6 +418,12 @@ html, body {
 }
 
 .video-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video-containerTwo {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
