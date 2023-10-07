@@ -30,7 +30,8 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.post('/', async(req: Request, res: Response) => {
     logger.log('info', 'Creating a new post');
-    res.status(200).end();
+    logger.log('info', req.body);
+    res.send(req.body).end();
 });
 
 export = router;
