@@ -314,7 +314,7 @@ html, body {
   
 .title {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2.5em;
  }
 
 
@@ -400,9 +400,6 @@ video, iframe {
     height: auto;            /* Maintain aspect ratio */
   }
 }
-
-
-
 
 
 .image-container {
@@ -501,8 +498,6 @@ hr.solid {
 .bodyResource {
   background-color: #f0f3fa;
 }
-
-
 
 
 .back-button {
