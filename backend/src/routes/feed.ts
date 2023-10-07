@@ -1,7 +1,7 @@
 import express from 'express';
 import { Request, Response } from 'express';
 import { prisma } from '../clients';
-import { createDirIfNotExist, findAvailableFileName } from '../services/util';
+import { createDirIfNotExist, determineExtension } from '../services/util';
 import { getCurrentDate } from '../services/date';
 import { writeFile } from 'fs/promises';
 import { resolve, join } from 'path';
@@ -40,8 +40,9 @@ router.post('/', async(req: Request, res: Response) => {
     try {
         // Determine Img URL
         await createDirIfNotExist(IMG_DIR);
-        //const filename = await findAvailableFileName(IMG_DIR, req.body.filename);
-        const filename = req.body.filename;
+        const extension = determineExtension(req.body.img);
+        const name = String((Math.random() + 1).toString(36).substring(7));
+        const filename = name + '.' + extension;
         const imgURL = join(IMG_DIR, filename);
 
         // Store image in file system

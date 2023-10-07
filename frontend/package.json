@@ -10,12 +10,18 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.25.3",
+    "@google-cloud/text-to-speech": "^5.0.1",
+    "@huggingface/inference": "^2.6.3",
     "@prisma/client": "^5.4.1",
+    "axios": "^1.5.1",
+    "gapi": "^0.0.3",
     "next": "13.5.4",
+    "openai": "^4.11.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/gapi": "^0.0.45",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
