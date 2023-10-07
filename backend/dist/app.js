@@ -17,6 +17,6 @@ app.use(express_1.default.text());
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(log_1.LogRequestBody);
 app.get("/", (req, res) => {
-    res.send("hello");
+    res.send("hello, world!");
 });
 //# sourceMappingURL=app.js.map
