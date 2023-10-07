@@ -168,7 +168,6 @@ html, body {
   background-color:#eae8e8;
   outline-color: rgb(0, 0, 0);
   
-  
 }
 
 .event-1:hover{
@@ -211,6 +210,16 @@ html, body {
   width: 10%;
 }
 
+#current-events-button{
+  padding: 30px;
+}
+#past-events-button{
+  padding: 30px;
+}
+
+#past-event-id{
+  display:none;
+}
 
 /*****FEED*****/
 
