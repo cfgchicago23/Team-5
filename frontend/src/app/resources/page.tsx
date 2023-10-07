@@ -9,10 +9,20 @@ const Resources = () => {
   const [isShowingCurrent, setIsShowingCurrent] = useState(true);
   function showPastEvents() {
     setIsShowingCurrent(false);
+    const currentButton = document.getElementById('h-skills') as HTMLElement;
+    currentButton.setAttribute("style", "background-color: white; "); 
+
+    const pastButton = document.getElementById('i-skills') as HTMLElement;
+    pastButton.setAttribute("style", "background-color:#f0f3fa; ");
   }
 
   function showCurrentEvents() {
     setIsShowingCurrent(true);
+    const currentButton = document.getElementById('h-skills') as HTMLElement;
+    currentButton.setAttribute("style", "background-color: #f0f3fa; "); 
+
+    const pastButton = document.getElementById('i-skills') as HTMLElement;
+    pastButton.setAttribute("style", "background-color:white; ");
   }
   
 return (
@@ -27,13 +37,13 @@ return (
            <img src="../resourceImg/20180703_151710.jpg" alt="Description of Image 3" className="resourceImage"/>
          </div>
         <div><p className="imageContainer">Thank you for taking a step toward rebuilding together, here are tips to make your experience as smooth as possible!</p></div>
-       </div>
+       
 
-      <div className='resources-button'>
-        <button className="current-events" onClick={showCurrentEvents}> Hands on Skills</button>
-        <button className="past-events" onClick={showPastEvents}> Interpersonal Skills</button>
+      <div className='skills-button'>
+        <button id="h-skills" onClick={showCurrentEvents}> Hands on Skills</button>
+        <button id="i-skills" onClick={showPastEvents}> Interpersonal Skills</button>
       </div>
-      
+      </div>
 
       {isShowingCurrent ?
        (<div className="video-container">
