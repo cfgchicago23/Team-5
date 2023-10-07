@@ -1,12 +1,13 @@
 import express from 'express';
 import { Request, Response } from 'express';
 import { prisma } from '../clients';
-import { createDirIfNotExist, findAvailableFileName } from '../services/util';
+import { createDirIfNotExist, determineExtension } from '../services/util';
 import { getCurrentDate } from '../services/date';
 import { writeFile } from 'fs/promises';
 import { resolve, join } from 'path';
 
 const IMG_DIR = resolve(process.cwd() + '/../frontend/public/imgs/');
+const IMG_URL = "imgs";
 const router = express.Router();
 
 router.get('/', async (req: Request, res: Response) => {
@@ -36,15 +37,20 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.post('/', async(req: Request, res: Response) => {
     logger.log('info', 'Creating a new post');
-
+    
     try {
+        const base64img = req.body.img.split(',')[1];
+
         // Determine Img URL
         await createDirIfNotExist(IMG_DIR);
-        //const filename = await findAvailableFileName(IMG_DIR, req.body.filename);
-        const imgURL = join(IMG_DIR, findAvailableFileName(IMG_DIR, "img"));
+        const extension = determineExtension(base64img);
+        const name = String((Math.random() + 1).toString(36).substring(7));
+        const filename = name + '.' + extension;
+        const imgDir = join(IMG_DIR, filename);
+        const imgURL = join(IMG_URL, filename);
 
         // Store image in file system
-        await writeFile(imgURL, req.body.img, {encoding: 'base64'});
+        await writeFile(imgDir, base64img, {encoding: 'base64'});
 
         // TODO: For now, just pick a random user to associate the post with
         // Later, get this from the auth token

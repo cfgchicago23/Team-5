@@ -5,7 +5,6 @@ import '../globals.css';
 const Resources = () => {
 return (
   <main>
-    <Navbar page="resources"/>
      <div className = "bodyResource">
       <div className= "resourcesContainer"> 
          <h2 className= "heading-title">Rebuilding Aurora 101: What to Know On Your First Day</h2>
