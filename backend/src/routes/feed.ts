@@ -8,7 +8,20 @@ router.get('/', async (req: Request, res: Response) => {
     logger.log('info', 'Getting Posts...');
 
     try {
-        const posts = await prisma.post.findMany();
+        const posts = await prisma.post.findMany({
+            select: {
+                id: true,
+                caption: true,
+                date: true,
+                authorId: false,
+                author: {
+                    select: {
+                        firstname: true,
+                        lastname: true
+                    }
+                }
+            }
+        });
         res.send(posts).status(200).end();
     } catch {
         res.status(400).end();
