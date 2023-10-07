@@ -5,6 +5,7 @@ import logger from './logger';
 global.logger = logger;
 
 import { LogRequestBody } from './middleware/log';
+import FeedRouter from './routes/feed';
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(LogRequestBody);
 app.get("/", (req: any, res: any) => {
     res.send("hello, world!");
 })
+
+app.use("/feed", FeedRouter);
 
 export {
     app

@@ -1,7 +1,6 @@
 import { createLogger, format, transports } from "winston";
 
 const logger = createLogger({
-    level: '0',
     format: format.combine(
         format.timestamp({
             format: 'YYYY-MM-DD HH:mm:ss'
@@ -10,12 +9,8 @@ const logger = createLogger({
         format.splat(),
         format.simple()
     ),
-    defaultMeta: { service: 'Code For Good Team 5' },
     transports: [
-        new transports.File({
-            filename: '/tmp/log.txt',
-            level: '0'
-        })
+        new transports.Console()
     ]
 });
 
