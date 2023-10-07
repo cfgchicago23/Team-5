@@ -1,20 +1,13 @@
-import Image from 'next/image'
 import Navbar from './components/Navbar'
 import './globals.css'
 
-// function MyApp({ Component, pageProps }) {
-//   return <>
-//     <Navbar/>
-
-//     <Component {...pageProps} />
-//   </>
-// }
 export default function Home() {
   return (
-    <body>
-      <Navbar/>
-    </body>
+    <main>
+      <Navbar page="opportunities"/>
+      DON'T PUT ANYTHING HERE 
+      This is a duplicate - I will fix this
+    </main>
     )
   }
 
-// export default MyApp
