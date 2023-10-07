@@ -1,5 +1,8 @@
+"use client";
 import * as React from 'react'
 import '../globals.css';
+import { useState } from 'react';
+import Popup from './Popup';
 
 
 // component returns the HTML of all the posts
@@ -8,36 +11,44 @@ const Posts = () => {
         {
             username: "Jane Doe",
             img: "../images/RTAMembers.jpg", 
-            description: "This is a good day",
+            description: "These columns are beautiful!",
             postedDate: ""
         },
         {
             username: "John Doe",
-            img: "",
-            description: "This is a great day",
+            img: "../images/John.png",
+            description: "Amazing day of Rebuilding",
             postedDate: ""
         },
         {
             username: "June Doe",
-            img: "",
-            description: "This is a grand day",
+            img: "../images/cleaning.gif",
+            description: "Today was so fun!",
             postedDate: ""
         }
         
     ]
+    const [seen, setSeen] = useState<boolean>(false)
+    function togglePop () {
+        setSeen(!seen);
+    };
+
   return (
     <div>
-        <div className='post-form-container'>
-            <div>
-                <p>Share Your Volunteering Spirit!</p>
-                <p className='plus'></p>
+        {seen ? <Popup toggle={togglePop}/> : 
+        <div>
+            <div className='post-form-container'>
+                <div onClick={togglePop}>
+                    <p>Share Your Volunteering Spirit!</p>
+                    <p className='plus'></p>
+                </div>
             </div>
-        </div>
-        <div className='post-container'>
-            {placeholder.map((item) => (
-                <Post postData={item}/>
-            ))}
-        </div>
+            <div className='post-container'>
+                {placeholder.map((item) => (
+                    <Post postData={item}/>
+                ))}
+            </div>
+        </div>}
     </div>
     
   );
@@ -63,7 +74,7 @@ const Post: React.FC<PostProps> = ({ postData }) => {
                 <p>{data.username}</p>
             </div>
             <div className='post-img'>
-                <img src={data.img}/>
+                <a><img src={data.img}></img></a>
             </div>
             <div className="post-description">
                 <p>{data.description}</p>

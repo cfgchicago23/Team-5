@@ -7,7 +7,40 @@ const Example = () => {
   const [inputText, setInputText] = useState("");
   const [language, setLanguage] = useState("en-es"); 
 
+  function base64toBlob(base64) {
+    const binary = atob(base64);
+    const array = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      array[i] = binary.charCodeAt(i);
+    }
+    return new Blob([array], { type: 'audio/mp3' }); // Change the type if necessary
+  }
+
+  const fetchAudio = async(text) => {
+    const request = {
+      input: {text: text},
+      // Select the language and SSML voice gender (optional)
+      voice: {languageCode: language, ssmlGender: 'NEUTRAL'},
+      // select the type of audio encoding
+      audioConfig: {audioEncoding: 'MP3'}
+    };
+
+    const response = await axios({
+      method: "post",
+      url: "http://127.0.0.1:8080/translate",
+      data: request,
+      headers: { "Content-Type": "application/json" },
+    })
+    const audioBlob = base64toBlob(response.data);
+    const blobUrl = URL.createObjectURL(audioBlob);
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.src = blobUrl;
+  }
+
   const fetchTranslation = async () => {
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.src = null;
+
     const response = await axios({
       method: "post",
       url: "/api/huggingface", 
@@ -16,6 +49,7 @@ const Example = () => {
     });
 
     setTranslatedText(response.data.translation_text);
+    fetchAudio(response.data.translation_text)
   };
 
   const handleInputChange = (event) => {
@@ -67,6 +101,7 @@ const Example = () => {
               </div>
               <div className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
                 <p className="text-lg text-gray-700">{translatedText}</p>
+                <audio id="audioPlayer" controls></audio>
               </div>
             </div>
           </div>

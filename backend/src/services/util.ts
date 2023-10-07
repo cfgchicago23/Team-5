@@ -6,19 +6,16 @@ function createDirIfNotExist(dir: string) {
     }
 }
 
-function findAvailableFileName(dir: string, filename: string) {
-    const baseName = filename.split('.')[0];
-    const takenNumbers = fs.readdirSync(dir, { withFileTypes: true })
-        .filter(f => f.isDirectory())
-        .filter(f => f.name.startsWith(baseName))
-        .map(swdir => swdir.name.slice(-1))
-        .map(parseInt);
-
-    let number = 0;
-    while (number++ in takenNumbers);
+function determineExtension(base64: string) {
+    switch (base64.charAt(0)) {
+        case '/': return 'jpg';
+        case 'i': return 'png';
+        case 'R': return 'gif';
+        case 'U': return 'webp';
+    }
 }
 
 export {
     createDirIfNotExist,
-    findAvailableFileName
+    determineExtension
 };

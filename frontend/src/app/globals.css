@@ -28,6 +28,35 @@ body {
     margin: 0;
 }
 
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: semibold;
+  color: #0c4510;
+  font-family: serif;
+  border-width: 2px;
+  border-color: #0c4510;
+}
+
+hr {
+  height: 10px;
+  width: 75%;
+  margin: auto;
+}
+
+.green-button {
+  border: none;
+  color: white;
+  background-color: #0c4510;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 20px;
+}
+
 
 /* Minimum aspect ratio */
 @media (min-aspect-ratio: 3/4) {
@@ -284,7 +313,7 @@ html, body {
   
 .title {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2.5em;
  }
 
 
@@ -302,11 +331,12 @@ html, body {
   object-fit: cover;
 }
 
-.leftSquare, .rightSquare {
-  padding-top: -30px; 
+.leftSquare{
+  padding-top: 30px; 
   padding-left: 30px; 
   padding-right: 30px;
   padding-bottom: 30px;
+  margin-bottom: 50px;
   width: 570px;
   height: auto;
   /* opacity: 0.5; */
@@ -315,12 +345,26 @@ html, body {
   position: sticky;  /* or 'sticky' if you want them to scroll with the page */
 }
 
+ .rightSquare {
+  padding-top: 30px; /* Negative padding won't have any effect. Just use positive values */
+  padding-left: 40px; 
+  padding-right: 20px;
+  padding-bottom: 30px;
+  width: 570px;
+  height: auto;
+  background-color: rgba(170, 170, 170, 0.5);
+  box-shadow: 2px 2px 5px  #0c4510;
+  position: absolute; /* Use 'absolute' positioning */
+}
+
 .leftSquare {
   left: 0;
+  margin-left: 20px; /* Add margin to the left of the left square */
 }
 
 .rightSquare {
   right: 0;
+  margin-right: 20px; /* Add margin to the left of the left square */
 }
 
 .textInsideSquare {
@@ -356,24 +400,221 @@ video, iframe {
   }
 }
 
-
-
-  
-  
-
-
 .image-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 50vh;
 }
 
 
 .image-container img {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 50vh;
+}
+
+/*****POPUP*****/
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+  
+.popup-inner {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+  
+.popup-inner p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0.5em;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin-bottom: 1em;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input input {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  border: None
+}
+
+.form-input textarea {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  border: solid #bbb
 }
 
 
 
+.popup-inner button {
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  color: white;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.popup-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.submit-button {
+  background-color: #0c4510;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 20px;
+}
+
+.close-button {
+  background-color: #bbb;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  border-radius: 20px;
+}
+
+.bodyResource {
+  background-color: #f0f3fa;
+}
+
+
+
+
+.back-button {
+  height: 30px;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  overflow-wrap: break-word;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.left1 {
+  width: 25%;
+  text-align: right;
+  color: #2dab16;
+  font-weight: semibold;
+}
+
+.right1 {
+  width: 75%;
+}
+
+.left2 {
+  width: 75%;
+}
+
+.right2 {
+  width: 25%;
+  text-align: center;
+  background-color: #D3D3D3;
+  margin-right: 50px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
+.video-icon {
+  height: 20px;
+  display: inline;
+  margin-top: -2px;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: fit-content;
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
