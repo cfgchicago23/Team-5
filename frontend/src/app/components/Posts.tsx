@@ -7,7 +7,7 @@ const Posts = () => {
     let placeholder = [
         {
             username: "Jane Doe",
-            img: "",
+            img: "https://i.mydramalist.com/x4kN8X_4s.jpg?v=1",
             description: "This is a good day",
             postedDate: ""
         },
@@ -57,7 +57,7 @@ const Post: React.FC<PostProps> = ({ postData }) => {
             </div>
             <div>
                 <div className='post-img'>
-                    {/* <img src='data.img'> */}
+                    <img src='data.img'/>
                 </div>
                 <p className="post-description">{data.description}</p>
             </div>
