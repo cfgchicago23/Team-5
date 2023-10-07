@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@huggingface/inference": "^2.6.3",
+    "openai": "^4.11.1"
+  }
+}
