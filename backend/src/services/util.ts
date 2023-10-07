@@ -7,6 +7,7 @@ function createDirIfNotExist(dir: string) {
 }
 
 function determineExtension(base64: string) {
+    console.log(base64.substring(0,20))
     switch (base64.charAt(0)) {
         case '/': return 'jpg';
         case 'i': return 'png';
