@@ -229,6 +229,38 @@ html, body {
   -webkit-box-orient: vertical;
 }
 
+.resourcesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -90px;
+}
+  
+  
+.title {
+  font-weight: bold;
+  font-size: 2em;
+ }
+
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+  
+  
+.resourceImage {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+  
+  
+
 
 .image-container {
   display: flex;
