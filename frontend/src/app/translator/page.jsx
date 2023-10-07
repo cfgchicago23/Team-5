@@ -18,10 +18,12 @@ const Example = () => {
   }
 
   const fetchAudio = async(text) => {
+    const toLanguage = language.split("-")[1];
+
     const request = {
       input: {text: text},
       // Select the language and SSML voice gender (optional)
-      voice: {languageCode: language, ssmlGender: 'NEUTRAL'},
+      voice: {languageCode: toLanguage + "-" + toLanguage, ssmlGender: 'FEMALE'},
       // select the type of audio encoding
       audioConfig: {audioEncoding: 'MP3'}
     };
