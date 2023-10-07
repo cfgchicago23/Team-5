@@ -217,12 +217,8 @@ html, body, main {
 }
 
 #current-events-button{
-  padding: 30px;
+  padding: 15px;
 }
-#past-events-button{
-  padding: 30px;
-}
-
 #past-event-id{
   display:none;
   padding: 15px;
@@ -353,7 +349,7 @@ html, body, main {
   flex-direction: column;
   margin-top:50px;
   align-items:center;
-  height: 600px;
+  background-color: white;
   /*Give a bit of padding to the sides so it doesn't touch the edge of the viewport */
 }
   
@@ -381,6 +377,24 @@ html, body, main {
   margin-top: 30px;
 }
   
+
+.skills-button{
+  margin-top: 30px;
+  text-align:center;
+  justify-content: center;
+}
+#h-skills{
+  padding: 15px;
+  margin-left:5px;
+  margin-right: 5px;
+  background-color: #f0f3fa;
+}
+#i-skills{
+  padding: 15px;
+  margin-left:5px;
+  margin-right: 5px;
+}
+
   
 .resourceImage {
   width: 200px;
