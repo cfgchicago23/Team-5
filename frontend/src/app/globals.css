@@ -190,11 +190,46 @@ html, body {
 
 /*****FEED*****/
 
+.post-form-container {
+  display: flex;
+  margin-top: 2em;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  padding: 1.5em;
+  box-shadow: 2px 2px 5px #aaaaaa;
+  border-radius:10px 10px 10px 10px;
+}
+
+.plus {
+  --b: 2px; 
+  width: 25px; 
+  aspect-ratio: 1;
+  border: 6px solid #0c4510;
+  border-radius:25px 25px 25px 25px;
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0c4510 90deg,#fff 0) 
+    calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+    calc(50%  + var(--b))   calc(50%  + var(--b));
+  display: inline-block;
+}
+
+.post-form-container div {
+  display: flex;
+  margin: 0.5em;
+  padding: 1em;
+  width: 100%;
+  background: #f1f1f1;
+  color: #6a6a6a;
+  border-radius:20px 20px 20px 20px;
+  justify-content: space-between;
+}
+
 .post-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
   margin-left: 1.5em;
+  margin-right: 1.5em;
   padding: 2em;
 }
 
@@ -209,6 +244,7 @@ html, body {
   flex-direction: column;
   box-shadow: 2px 2px 5px #aaaaaa;
   position: relative;
+  border-radius:10px 10px 10px 10px;
 }
 
 .post-header {

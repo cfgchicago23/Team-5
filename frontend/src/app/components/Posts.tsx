@@ -1,6 +1,5 @@
 import * as React from 'react'
 import '../globals.css';
-import imageToAdd from '../../public/images/RTAMembers.jpg';
 
 
 // component returns the HTML of all the posts
@@ -27,11 +26,20 @@ const Posts = () => {
         
     ]
   return (
-    <div className='post-container'>
-        {placeholder.map((item) => (
-            <Post postData={item}/>
-        ))}
+    <div>
+        <div className='post-form-container'>
+            <div>
+                <p>Share Your Volunteering Spirit!</p>
+                <p className='plus'></p>
+            </div>
+        </div>
+        <div className='post-container'>
+            {placeholder.map((item) => (
+                <Post postData={item}/>
+            ))}
+        </div>
     </div>
+    
   );
 };
 
