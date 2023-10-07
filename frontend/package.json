@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backend": "tsc; npx dotenv -e .env node dist/src/index.js"
   },
   "dependencies": {
     "@prisma/client": "^5.4.1",
@@ -22,7 +23,6 @@
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "postcss": "^8",
-    "prisma": "^5.4.1",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
