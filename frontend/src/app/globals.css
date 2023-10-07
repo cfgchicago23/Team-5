@@ -158,6 +158,13 @@ html, body, main {
 	text-align: center;
 	margin-bottom: 30px;
   font-size: 20px;
+  vertical-align: top;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  outline-style: solid;
+  background-color:#79c244;
+  outline-color: rgb(0, 0, 0);
 }
 
 .event-1{
@@ -706,4 +713,11 @@ hr.solid {
   margin: 1rem, 4rem, 1rem, 1rem;
   padding-top: 2em;
   font-size: 24px;
+}
+
+button[aria-label="facebook"],
+button[aria-label="twitter"],
+button[aria-label="whatsapp"]
+{
+  margin-right: 10px
 }
