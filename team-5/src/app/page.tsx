@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import JobBoard from './components/JobBoard'
 import './globals.css'
 
 export default function Home() {
