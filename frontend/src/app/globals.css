@@ -235,7 +235,7 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -90px;
+  margin-top: -50px;
 }
   
   
@@ -258,6 +258,63 @@ html, body {
   height: auto;
   object-fit: cover;
 }
+
+.leftSquare, .rightSquare {
+  padding-top: -30px; 
+  padding-left: 30px; 
+  padding-right: 30px;
+  padding-bottom: 30px;
+  width: 570px;
+  height: auto;
+  /* opacity: 0.5; */
+  background-color: rgba(170, 170, 170, 0.5);
+  box-shadow: 2px 2px 5px  #0c4510;
+  position: sticky;  /* or 'sticky' if you want them to scroll with the page */
+}
+
+.leftSquare {
+  left: 0;
+}
+
+.rightSquare {
+  right: 0;
+}
+
+.textInsideSquare {
+  color: black;          
+  padding-left: 20px;          /* Spacing around the text */
+  text-align: center;     /* Center the text horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;           /* flex properties will vertically center the text */
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;   /* Horizontally center the video */
+  align-items: center;       /* Vertically center the video*/
+  padding: 20px;             /* Space around the video */
+  margin-top: 30px;          /* Space between the video container and the above content */
+}
+
+video, iframe {
+  max-width: 100%;           /* Ensure the video doesn't overflow the container */
+  /* height: auto; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: give the video a subtle shadow for depth */
+}
+
+/* Responsive behavior: */
+@media (max-width: 768px) {
+  video, iframe {
+    width: 100%;             /* On smaller screens, the video takes full width */
+    height: auto;            /* Maintain aspect ratio */
+  }
+}
+
+
+
   
   
 

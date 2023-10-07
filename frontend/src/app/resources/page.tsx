@@ -13,6 +13,10 @@ return (
           <img src="../resourceImg/20170603_100630.jpg" alt="Description of Image 2" className="resourceImage"/>
           <img src="../resourceImg/20180703_151710.jpg" alt="Description of Image 3" className="resourceImage"/>
       </div> 
+      <div><p className="imageContainer">Thank you for taking a step toward rebuilding together, here are tips to make your experience as smooth as possible!</p></div>
+      </div>
+      <div className="leftSquare"><h3 className="title">Painting 101:</h3><p className="textInsideSquare">For those, who will be taking part of the paint part of the rebuilding process:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CRXCB_3gLok?si=EQ_HjPy_c0byTPoa" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
   </main>
 );
