@@ -1,6 +1,14 @@
+"use client";
+import * as React from 'react'
 import '../globals.css';
+import { useState } from 'react';
+import SignUp from './SignUp';
 
 const JobPosting = () => {
+    const [seen, setSeen] = useState<boolean>(false)
+    function togglePop () {
+        setSeen(!seen);
+    };
   return (
     <main>
         <h1>Veterans' Fall Clean-Up and Repairs</h1>
@@ -34,10 +42,18 @@ const JobPosting = () => {
             </div>
             <div className="row">
                 <div className="column left1">
+                    What You'll Be Doing
+                </div>
+                <div className="column right1">
+                    Painting building exterior, Reinstalling floor boards, and More!
+                </div>
+            </div>
+            <div className="row">
+                <div className="column left1">
                     Volunteer List
                 </div>
                 <div className="column right1">
-                    Sammy, Linh, Yasmin, and 49 more
+                    Jess Hyde, John Kraft, Will Stark, and 49 more
                 </div>
             </div>
             <div className="row">
@@ -57,9 +73,12 @@ const JobPosting = () => {
             <div className="row">
                 <div className="column left1">
                 </div>
-                <div className="column right1">
-                    <button>Sign Up For This Event!</button>
-                </div>
+                {seen ? <SignUp toggle={togglePop}/> : 
+                <div className='column right1'>
+                    <div onClick={togglePop}>
+                        <button>Sign Up For This Event!</button>
+                    </div>
+                </div>}
             </div>
         </div>
         <div className="column right2">Comment Thread</div>
