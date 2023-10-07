@@ -16,9 +16,11 @@
     "axios": "^1.5.1",
     "gapi": "^0.0.3",
     "next": "13.5.4",
+    "next-share": "^0.27.0",
     "openai": "^4.11.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/gapi": "^0.0.45",

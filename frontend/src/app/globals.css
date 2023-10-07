@@ -40,8 +40,6 @@ h1 {
 
 hr {
   height: 10px;
-  width: 75%;
-  margin: auto;
 }
 
 .green-button {
@@ -57,6 +55,10 @@ hr {
   border-radius: 20px;
 }
 
+#landing{
+  width: 70%;
+  height: 70%;
+}
 
 /* Minimum aspect ratio */
 @media (min-aspect-ratio: 3/4) {
@@ -126,8 +128,8 @@ hr {
 	margin: 0px;
 	padding: 0px;
 }
-html, body {
-	font-family: sans-serif, arial;
+html, body, main {
+	font-family: Times, "Times New Roman", serif;
 	font-size: 15px;
 }
 .container {
@@ -141,7 +143,7 @@ html, body {
   width: 100%;
 	padding-top: 50px;
 	background-color: #f0f3fa;
-	padding-bottom: 60px;
+	padding-bottom: 0px;
 }
 
 .recent-event-heading {
@@ -154,6 +156,13 @@ html, body {
 	text-align: center;
 	margin-bottom: 30px;
   font-size: 20px;
+  vertical-align: top;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  outline-style: solid;
+  background-color:#79c244;
+  outline-color: rgb(0, 0, 0);
 }
 
 .event-1{
@@ -219,6 +228,25 @@ html, body {
 
 #past-event-id{
   display:none;
+  padding: 15px;
+
+  background-color: white;
+}
+
+#past-events-button{
+  padding: 15px;
+  background-color:#f0f3fa;
+}
+
+
+#past-event-id{
+  display:none;
+}
+
+.event-buttons{
+  justify-content: center;
+  text-align: center;
+
 }
 
 /*****FEED*****/
@@ -629,10 +657,49 @@ hr.solid {
 .right2 {
   width: 25%;
   text-align: center;
-  background-color: #D3D3D3;
+  background-color: #f0f3fa;
   margin-right: 50px;
   margin-left: 30px;
   margin-top: 40px;
+}
+
+.comment {
+  text-align: left;
+}
+
+.comment-user {
+  text-align: right;
+}
+
+.search input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    font-size: 17px;
+  }
+
+.search-right {
+  width: 40%;
+  height: 20px;
+  float: left;
+}
+
+.search-left {
+  width: 60%;
+  float: left;
+}
+
+.comment-button {
+  border: none;
+  color: white;
+  background-color: #0c4510;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 20px;
 }
 
 
@@ -645,6 +712,22 @@ hr.solid {
   height: 20px;
   display: inline;
   margin-top: -2px;
+}
+
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
+}
+
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
 }
 
 
@@ -684,4 +767,19 @@ hr.solid {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
+}
+
+button[aria-label="facebook"],
+button[aria-label="twitter"],
+button[aria-label="whatsapp"]
+{
+  margin-right: 10px
 }

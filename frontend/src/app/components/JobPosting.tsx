@@ -4,6 +4,15 @@ import '../globals.css';
 import { useState } from 'react';
 import SignUp from './SignUp';
 import '../app.js'
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    WhatsappShareButton,
+    WhatsappIcon
+}
+from 'next-share'; 
 
 const JobPosting = () => {
     const [seen, setSeen] = useState<boolean>(false)
@@ -17,6 +26,22 @@ const JobPosting = () => {
         <hr></hr>
         <div className="row">
             <div className="column left2">
+            <div className="row">
+                <div className="column left1">
+                    Share
+                </div>
+                <div className="column right1">
+                    <FacebookShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <FacebookIcon size={32} round/>
+                    </FacebookShareButton>
+                    <TwitterShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <TwitterIcon size={32} round/>
+                    </TwitterShareButton>
+                    <WhatsappShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <WhatsappIcon size={32} round/>
+                    </WhatsappShareButton>
+                </div>
+            </div>
             <div className="row">
                 <div className="column left1">
                     Date/Time
@@ -102,9 +127,77 @@ const JobPosting = () => {
                 </div>}
             </div>
         </div>
-        <div className="column right2">Comment Thread</div>
-        </div>
-    <script src="../app.js" ></script> 
+        <div className="column right2">
+            <div className="comment">
+            What can we gain from this experience?
+            </div>
+            <div className="comment-user">
+            - Anonymous Participant
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    You can change someone's life!
+                </div>
+                <div className="comment-user">
+                    - John Gray
+                </div>
+                <div className="comment">
+                    You can make new friends
+                </div>
+                <div className="comment-user">
+                    - Anne Blue
+                </div>
+            </details>
+            </div>
+            <hr className="solid"></hr>
+            <div className="comment">
+            What time should we get there?
+            </div>
+            <div className="comment-user">
+            - Ally Green
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    Just be there on time :)
+                </div>
+                <div className="comment-user">
+                    - Team Leader
+                </div>
+            </details>
+            </div>            
+            <hr className="solid"></hr>
+            <div className="comment">
+            Will food be provided?
+            </div>
+            <div className="comment-user">
+            - George Sly
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    Breakfast, Lunch, and a FREE Shirt!
+                </div>
+                <div className="comment-user">
+                    - Ella King
+                </div>
+            </details>
+            </div>            
+            <hr className="solid"></hr>
+            <div className="row">
+                <div className="column search-left">
+                    <input type="text" placeholder="Comment"/>
+                </div>
+                <div className="column search-right">
+                    <div className="comment-button">Submit</div>
+                </div>
+            </div>
+            </div>
+        </div>	        
     </main>
   );
 };
