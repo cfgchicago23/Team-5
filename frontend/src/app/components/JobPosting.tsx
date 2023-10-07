@@ -102,9 +102,77 @@ const JobPosting = () => {
                 </div>}
             </div>
         </div>
-        <div className="column right2">Comment Thread</div>
+        <div className="column right2">
+            <div className="comment">
+            What can we gain from this experience?
+            </div>
+            <div className="comment-user">
+            - Anonymous Participant
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    You can change someone's life!
+                </div>
+                <div className="comment-user">
+                    - John Gray
+                </div>
+                <div className="comment">
+                    You can make new friends
+                </div>
+                <div className="comment-user">
+                    - Anne Blue
+                </div>
+            </details>
+            </div>
+            <hr className="solid"></hr>
+            <div className="comment">
+            What time should we get there?
+            </div>
+            <div className="comment-user">
+            - Ally Green
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    Just be there on time :)
+                </div>
+                <div className="comment-user">
+                    - Team Leader
+                </div>
+            </details>
+            </div>            
+            <hr className="solid"></hr>
+            <div className="comment">
+            Will food be provided?
+            </div>
+            <div className="comment-user">
+            - George Sly
+            </div>
+            <div className="comment">
+            <details>
+                <summary>View Replies</summary>
+                <div className="comment">
+                    Breakfast, Lunch, and a FREE Shirt!
+                </div>
+                <div className="comment-user">
+                    - Ella King
+                </div>
+            </details>
+            </div>            
+            <hr className="solid"></hr>
+            <div className="row">
+                <div className="column search-left">
+                    <input type="text" placeholder="Comment"/>
+                </div>
+                <div className="column search-right">
+                    <div className="comment-button">Submit</div>
+                </div>
+            </div>
+            </div>
         </div>
-    <script src="../app.js" ></script> 
     </main>
   );
 };
