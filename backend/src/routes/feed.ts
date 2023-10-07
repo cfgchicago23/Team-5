@@ -4,8 +4,9 @@ import { prisma } from '../clients';
 import { createDirIfNotExist, findAvailableFileName } from '../services/util';
 import { getCurrentDate } from '../services/date';
 import { writeFile } from 'fs/promises';
+import { resolve, join } from 'path';
 
-const IMG_DIR = process.cwd() + '/../frontend/public/imgs/';
+const IMG_DIR = resolve(process.cwd() + '/../frontend/public/imgs/');
 const router = express.Router();
 
 router.get('/', async (req: Request, res: Response) => {
@@ -41,15 +42,19 @@ router.post('/', async(req: Request, res: Response) => {
         await createDirIfNotExist(IMG_DIR);
         //const filename = await findAvailableFileName(IMG_DIR, req.body.filename);
         const filename = req.body.filename;
-        const imgURL = IMG_DIR + filename;
+        const imgURL = join(IMG_DIR, filename);
 
         // Store image in file system
         await writeFile(imgURL, req.body.img, {encoding: 'base64'});
 
+        // TODO: For now, just pick a random user to associate the post with
+        // Later, get this from the auth token
+        const user = await prisma.user.findFirst();
+
         // Store post in database
         await prisma.post.create({
             data: {
-                authorId: req.body.authorId,
+                authorId: user.id,
                 imgURL: imgURL,
                 description: req.body.description,
                 postedDate: getCurrentDate()
