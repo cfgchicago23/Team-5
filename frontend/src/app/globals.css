@@ -462,6 +462,15 @@ hr.solid {
   flex-direction: column;
 }
 
+.form-input input {
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  border: None
+}
 
 .form-input textarea {
   width: 100%;
