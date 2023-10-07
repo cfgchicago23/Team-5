@@ -40,8 +40,6 @@ h1 {
 
 hr {
   height: 10px;
-  width: 75%;
-  margin: auto;
 }
 
 .green-button {
@@ -633,10 +631,49 @@ hr.solid {
 .right2 {
   width: 25%;
   text-align: center;
-  background-color: #D3D3D3;
+  background-color: #f0f3fa;
   margin-right: 50px;
   margin-left: 30px;
   margin-top: 40px;
+}
+
+.comment {
+  text-align: left;
+}
+
+.comment-user {
+  text-align: right;
+}
+
+.search input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    font-size: 17px;
+  }
+
+.search-right {
+  width: 40%;
+  height: 20px;
+  float: left;
+}
+
+.search-left {
+  width: 60%;
+  float: left;
+}
+
+.comment-button {
+  border: none;
+  color: white;
+  background-color: #0c4510;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 20px;
 }
 
 
