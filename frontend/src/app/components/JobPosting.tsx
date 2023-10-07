@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import * as React from 'react'
 import '../globals.css';
@@ -9,6 +10,11 @@ const JobPosting = () => {
     function togglePop () {
         setSeen(!seen);
     };
+=======
+import '../globals.css';
+
+const JobPosting = () => {
+>>>>>>> 8e914e6 (Add Job Posting)
   return (
     <main>
         <h1>Veterans' Fall Clean-Up and Repairs</h1>
@@ -42,6 +48,7 @@ const JobPosting = () => {
             </div>
             <div className="row">
                 <div className="column left1">
+<<<<<<< HEAD
                     What You'll Be Doing
                 </div>
                 <div className="column right1">
@@ -54,6 +61,12 @@ const JobPosting = () => {
                 </div>
                 <div className="column right1">
                     Jess Hyde, John Kraft, Will Stark, and 49 more
+=======
+                    Volunteer List
+                </div>
+                <div className="column right1">
+                    Sammy, Linh, Yasmin, and 49 more
+>>>>>>> 8e914e6 (Add Job Posting)
                 </div>
             </div>
             <div className="row">
@@ -73,12 +86,18 @@ const JobPosting = () => {
             <div className="row">
                 <div className="column left1">
                 </div>
+<<<<<<< HEAD
                 {seen ? <SignUp toggle={togglePop}/> : 
                 <div className='column right1'>
                     <div onClick={togglePop}>
                         <button>Sign Up For This Event!</button>
                     </div>
                 </div>}
+=======
+                <div className="column right1">
+                    <button>Sign Up For This Event!</button>
+                </div>
+>>>>>>> 8e914e6 (Add Job Posting)
             </div>
         </div>
         <div className="column right2">Comment Thread</div>
