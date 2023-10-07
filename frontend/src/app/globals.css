@@ -105,30 +105,6 @@ html, body {
 	width: 1170px;
 	margin: 0px auto;
 }
-.width-100 {
-	width: 100%;
-	float: left;
-}
-.width-66 {
-	width: 66%;
-	float: left;
-}
-.width-50 {
-	float: left;
-	width: 50%;
-}
-.width-75 {
-	width: 75%;
-	float: left;
-}
-.width-33 {
-	width: 33%;
-	float: left;
-}
-.width-25 {
-	width: 25%;
-	float: left;
-}
 
 /*****RECENT event SECTION RECENT event SECTION*****/
 
@@ -151,8 +127,28 @@ html, body {
   font-size: 20px;
 }
 
+.event-1{
+  width: 29%;
+  display:inline-block;
+  margin: 20px;
+  vertical-align: top;
+  height: 450px;
+  border-radius: 10px;
+  padding: 5px;
+  outline-style: solid;
+  background-color:#eae8e8;
+  outline-color: rgb(0, 0, 0);
+  
+  
+}
+
+.event-1:hover{
+  background-color:#8eb176;
+}
+
 .recent-event-list{
-	float: left;
+	justify-content: center;
+  width: 100%;
 	background-color: white;
 	padding: 20px;
 	margin-left: 10px;
@@ -164,19 +160,13 @@ html, body {
 	font-size: 20px;
 }
 
-.event-company {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-.event-company i {
-	color: orange;
-	margin-left: 10px;
+.event-time {
+  margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .event-skill {
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	font-size: 16px;
 }
 
@@ -185,8 +175,13 @@ html, body {
 	padding: 10px;
 	color: white;
 	text-decoration: none;
-	float: right;
+  width: 100%;
 }
+
+.job-images{
+  width: 10%;
+}
+
 
 /*****FEED*****/
 .post {
