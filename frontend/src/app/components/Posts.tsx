@@ -1,5 +1,6 @@
 import * as React from 'react'
 import '../globals.css';
+import imageToAdd from '../../public/images/RTAMembers.jpg';
 
 
 // component returns the HTML of all the posts
@@ -7,7 +8,7 @@ const Posts = () => {
     let placeholder = [
         {
             username: "Jane Doe",
-            img: "",
+            img: "../images/RTAMembers.jpg", 
             description: "This is a good day",
             postedDate: ""
         },
@@ -26,12 +27,10 @@ const Posts = () => {
         
     ]
   return (
-    <div>
-        <div>
-            {placeholder.map((item) => (
-                <Post postData={item}/>
-            ))}
-        </div>
+    <div className='post-container'>
+        {placeholder.map((item) => (
+            <Post postData={item}/>
+        ))}
     </div>
   );
 };
@@ -55,11 +54,11 @@ const Post: React.FC<PostProps> = ({ postData }) => {
             <div className='post-header'>
                 <p>{data.username}</p>
             </div>
-            <div>
-                <div className='post-img'>
-                    {/* <img src='data.img'> */}
-                </div>
-                <p className="post-description">{data.description}</p>
+            <div className='post-img'>
+                <img src={data.img}/>
+            </div>
+            <div className="post-description">
+                <p>{data.description}</p>
             </div>
         </div>
       );
