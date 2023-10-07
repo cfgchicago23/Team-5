@@ -11,19 +11,19 @@ const Posts = () => {
         {
             username: "Jane Doe",
             img: "../images/RTAMembers.jpg", 
-            description: "This is a good day",
+            description: "These columns are beautiful!",
             postedDate: ""
         },
         {
             username: "John Doe",
-            img: "",
-            description: "This is a great day",
+            img: "../images/John.png",
+            description: "Amazing day of Rebuilding",
             postedDate: ""
         },
         {
             username: "June Doe",
-            img: "",
-            description: "This is a grand day",
+            img: "../images/cleaning.gif",
+            description: "Today was so fun!",
             postedDate: ""
         }
         
@@ -74,7 +74,7 @@ const Post: React.FC<PostProps> = ({ postData }) => {
                 <p>{data.username}</p>
             </div>
             <div className='post-img'>
-                <img src={data.img}/>
+                <a><img src={data.img}></img></a>
             </div>
             <div className="post-description">
                 <p>{data.description}</p>
