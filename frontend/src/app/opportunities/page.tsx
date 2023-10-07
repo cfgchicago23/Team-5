@@ -4,6 +4,7 @@ import '../globals.css'
 
 
 export default function Opportunities() {
+  
   return (
   <main>
     <Navbar page="opportunities" />
