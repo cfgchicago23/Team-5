@@ -337,6 +337,7 @@ html, body {
   padding-left: 30px; 
   padding-right: 30px;
   padding-bottom: 30px;
+  margin-bottom: 50px;
   width: 570px;
   height: auto;
   /* opacity: 0.5; */
@@ -496,6 +497,12 @@ hr.solid {
 .close-button {
   background-color: #bbb;
 }
+
+.bodyResource {
+  background-color: #f0f3fa;
+}
+
+
 
 
 .back-button {
