@@ -644,6 +644,22 @@ hr.solid {
   margin-top: -2px;
 }
 
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
+}
+
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
+}
+
 
 .modal {
   display: none; /* Hidden by default */
@@ -681,4 +697,12 @@ hr.solid {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*****TYPEWRITER*****/
+.typewriter {
+  text-align: center;
+  margin: 1rem, 4rem, 1rem, 1rem;
+  padding-top: 2em;
+  font-size: 24px;
 }
