@@ -1,5 +1,6 @@
 import '../globals.css';
-import { UserButton , SignInButton,SignUpButton} from "@clerk/nextjs";
+// import { UserButton , SignInButton,SignUpButton} from "@clerk/nextjs";
+
 
 interface PageName {
   page: string
@@ -33,15 +34,15 @@ function Navbar({ page }: PageName) {
           <a href="feed">Feed</a>
           <a href="resources">Resources</a>
           <a className="active" href="opportunities">Opportunities</a>
-        <UserButton/>
+        {/* <UserButton/>
           <div>
 
 <SignInButton/>
 <SignUpButton/>
-</div>
+</div> */}
       </div>
     );
   }
-};
+}
 
 export default Navbar;

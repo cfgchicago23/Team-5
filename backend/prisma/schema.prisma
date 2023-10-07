@@ -14,15 +14,15 @@ model User {
   id               Int    @id @default(autoincrement())
   email            String @unique
   phoneNumber      String
-  firstname        String
-  lastname         String
+  name             String
   posts            Post[]
 }
 
 model Post {
   id               Int     @id @default(autoincrement())
-  date             String
-  caption          String
+  imgURL           String
+  postedDate       String
+  description      String
   authorId         Int
   author           User    @relation(fields: [authorId], references: [id])
 }

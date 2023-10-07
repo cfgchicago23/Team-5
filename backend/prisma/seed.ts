@@ -6,8 +6,7 @@ async function createDummyUsers() {
     await prisma.user.create({
         data: {
             email: "johndoe@gmail.com",
-            firstname: "John",
-            lastname: "Doe",
+            name: "John Doe",
             phoneNumber: "111-111-1111"
         }
     });
@@ -23,16 +22,18 @@ async function createDummyPosts() {
     await prisma.post.create({
         data: {
             authorId: johndoe.id,
-            caption: "Had a great time volunteering, learned how to paint",
-            date: "2023-04-04"
+            imgURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
+            description: "Had a great time volunteering, learned how to paint",
+            postedDate: "2023-04-04"
         }
     });
 
     await prisma.post.create({
         data: {
             authorId: johndoe.id,
-            caption: "Volunteering Part 2, great time again, learned how to paint",
-            date: "2023-04-04"
+            imgURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
+            description: "Volunteering Part 2, great time again, learned how to paint",
+            postedDate: "2023-04-04"
         }
     })
 }
