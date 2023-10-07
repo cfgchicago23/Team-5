@@ -41,8 +41,7 @@ router.post('/', async(req: Request, res: Response) => {
         // Determine Img URL
         await createDirIfNotExist(IMG_DIR);
         //const filename = await findAvailableFileName(IMG_DIR, req.body.filename);
-        const filename = req.body.filename;
-        const imgURL = join(IMG_DIR, filename);
+        const imgURL = join(IMG_DIR, findAvailableFileName(IMG_DIR, "img"));
 
         // Store image in file system
         await writeFile(imgURL, req.body.img, {encoding: 'base64'});
