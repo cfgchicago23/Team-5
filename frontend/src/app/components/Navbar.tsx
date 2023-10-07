@@ -43,6 +43,6 @@ function Navbar({ page }: PageName) {
       </div>
     );
   }
-}
+};
 
 export default Navbar;
