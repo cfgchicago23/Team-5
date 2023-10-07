@@ -1,5 +1,8 @@
+"use client";
 import * as React from 'react'
 import '../globals.css';
+import { useState } from 'react';
+import Popup from './Popup';
 
 
 // component returns the HTML of all the posts
@@ -25,19 +28,27 @@ const Posts = () => {
         }
         
     ]
+    const [seen, setSeen] = useState<boolean>(false)
+    function togglePop () {
+        setSeen(!seen);
+    };
+
   return (
     <div>
-        <div className='post-form-container'>
-            <div>
-                <p>Share Your Volunteering Spirit!</p>
-                <p className='plus'></p>
+        {seen ? <Popup toggle={togglePop}/> : 
+        <div>
+            <div className='post-form-container'>
+                <div onClick={togglePop}>
+                    <p>Share Your Volunteering Spirit!</p>
+                    <p className='plus'></p>
+                </div>
             </div>
-        </div>
-        <div className='post-container'>
-            {placeholder.map((item) => (
-                <Post postData={item}/>
-            ))}
-        </div>
+            <div className='post-container'>
+                {placeholder.map((item) => (
+                    <Post postData={item}/>
+                ))}
+            </div>
+        </div>}
     </div>
     
   );
