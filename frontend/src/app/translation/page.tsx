@@ -4,7 +4,7 @@ import Example from '../translator/page'
 export default function Translation() {
   return (
     <main>
-      <Navbar page="translation"/>
+      <Navbar page="translator"/>
 
       <Example/>
     </main>
