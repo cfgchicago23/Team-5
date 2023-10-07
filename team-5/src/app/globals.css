@@ -8,13 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -187,4 +187,47 @@ html, body {
 	text-decoration: none;
 	float: right;
 }
+
+/*****FEED*****/
+.post {
+  max-width: 300px;
+  min-width: 300px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px #aaaaaa;
+  position: relative;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  width: 90%;
+}
+
+.post-img {
+  display: flex;
+  justify-content: center;
+}
+
+.post-img img {
+  max-height: 300px;
+  max-width: 200px;
+  min-height: 300px;
+  min-width: 200px;
+  padding-bottom: 5px;
+}
+
+.post-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+
 
