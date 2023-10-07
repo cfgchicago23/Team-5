@@ -215,6 +215,8 @@ html, body {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 90%;
 }
 
@@ -227,12 +229,14 @@ html, body {
   max-height: 300px;
   max-width: 200px;
   min-height: 300px;
-  min-width: 200px;
+  min-width: 250px;
   padding-bottom: 5px;
 }
 
 .post-description {
   overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
