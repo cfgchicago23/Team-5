@@ -8,8 +8,8 @@ router.get('/', async (req: Request, res: Response) => {
     logger.log('info', 'Getting Posts...');
 
     try {
-        const users = await prisma.user.findMany();
-        res.send(users).status(200).end();
+        const posts = await prisma.post.findMany();
+        res.send(posts).status(200).end();
     } catch {
         res.status(400).end();
     }
