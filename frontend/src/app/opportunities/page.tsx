@@ -4,13 +4,12 @@ import '../globals.css'
 
 
 export default function Opportunities() {
-  
   return (
   <main>
     <Navbar page="opportunities" />
     <div className="image-container">
       <img
-        src="../BeforeAndAfter.png"
+        src="../images/BeforeAndAfter.png"
         alt="Before and After"
         width={600}
         height={400}

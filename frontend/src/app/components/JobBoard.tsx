@@ -1,5 +1,4 @@
 "use client";
-import { SignUpButton } from '@clerk/nextjs';
 import '../globals.css';
 
 const JobBoard = () => {
@@ -38,16 +37,13 @@ const JobBoard = () => {
     <main>
         <div className="recent-event">
             <h2 className="recent-event-heading">UPCOMING EVENTS</h2>
-            <SignUpButton ><p className="recent-event-sub-heading">Sign up to volunteer at an event</p></SignUpButton>
+            <p className="recent-event-sub-heading">Sign up to volunteer at an event</p>
             
           <div className="event-buttons">
             <button id="current-events-button"  onClick={showCurrentEvents}>Current Events</button>
             <button id="past-events-button"  onClick={showPastEvents}>Past Events</button>
           </div>
         </div>
-
-
-
         <div id = "recent-event-id" className="recent-event-list">
             <a href="../opportunities/job1">
               <div className='event-1'>
