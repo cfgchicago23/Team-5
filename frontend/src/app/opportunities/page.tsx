@@ -9,7 +9,7 @@ export default function Opportunities() {
     <Navbar page="opportunities" />
     <div className="image-container">
       <img
-        src="../images/BeforeAndAfterImage.png"
+        src="../BeforeAndAfter.png"
         alt="Before and After"
         width={600}
         height={400}
