@@ -713,3 +713,10 @@ hr.solid {
   padding-top: 2em;
   font-size: 24px;
 }
+
+button[aria-label="facebook"],
+button[aria-label="twitter"],
+button[aria-label="whatsapp"]
+{
+  margin-right: 10px
+}

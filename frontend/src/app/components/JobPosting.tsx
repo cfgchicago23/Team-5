@@ -4,6 +4,15 @@ import '../globals.css';
 import { useState } from 'react';
 import SignUp from './SignUp';
 import '../app.js'
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    WhatsappShareButton,
+    WhatsappIcon
+}
+from 'next-share'; 
 
 const JobPosting = () => {
     const [seen, setSeen] = useState<boolean>(false)
@@ -17,6 +26,22 @@ const JobPosting = () => {
         <hr></hr>
         <div className="row">
             <div className="column left2">
+            <div className="row">
+                <div className="column left1">
+                    Share
+                </div>
+                <div className="column right1">
+                    <FacebookShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <FacebookIcon size={32} round/>
+                    </FacebookShareButton>
+                    <TwitterShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <TwitterIcon size={32} round/>
+                    </TwitterShareButton>
+                    <WhatsappShareButton url="http://www.rtaurora.org/opportunities/job1">
+                        <WhatsappIcon size={32} round/>
+                    </WhatsappShareButton>
+                </div>
+            </div>
             <div className="row">
                 <div className="column left1">
                     Date/Time
