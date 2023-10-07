@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import Navbar from '../components/Navbar'
 
+const languageMap = {
+
+}
+
 const Example = () => {
   const [translatedText, setTranslatedText] = useState("");
   const [inputText, setInputText] = useState("");
@@ -18,10 +22,12 @@ const Example = () => {
   }
 
   const fetchAudio = async(text) => {
+    const languageCode = language.split("-")[1] + "-" + language.split("-")[1];
+    console.log(languageCode)
     const request = {
       input: {text: text},
       // Select the language and SSML voice gender (optional)
-      voice: {languageCode: language, ssmlGender: 'NEUTRAL'},
+      voice: {languageCode: languageCode, ssmlGender: 'FEMALE'},
       // select the type of audio encoding
       audioConfig: {audioEncoding: 'MP3'}
     };
