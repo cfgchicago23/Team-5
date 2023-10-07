@@ -302,19 +302,31 @@ html, body {
   -webkit-box-orient: vertical;
 }
 
+/****RESOURCES****/
+
 .resourcesContainer {
-  display: flex;
+  display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-top: -50px;
+  margin-top:50px;
+  align-items:center;
+  height: 600px;
+  /*Give a bit of padding to the sides so it doesn't touch the edge of the viewport */
 }
   
   
 .title {
+  align-self: center;
   font-weight: bold;
   font-size: 2.5em;
+  margin-top: 30px;
+ }
+
+   
+.heading-title {
+  /* align-self: center; */
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-top: 30px;
  }
 
 
@@ -332,50 +344,73 @@ html, body {
   object-fit: cover;
 }
 
-.leftSquare{
+
+.leftSquare, .rightSquare {
   padding-top: 30px; 
   padding-left: 30px; 
   padding-right: 30px;
   padding-bottom: 30px;
   margin-bottom: 50px;
-  width: 570px;
+  min-width: 570px;
   height: auto;
   /* opacity: 0.5; */
   background-color: rgba(170, 170, 170, 0.5);
   box-shadow: 2px 2px 5px  #0c4510;
-  position: sticky;  /* or 'sticky' if you want them to scroll with the page */
+  /* position: sticky;  or 'sticky' if you want them to scroll with the page */
 }
 
- .rightSquare {
+.rightSquare {
   padding-top: 30px; /* Negative padding won't have any effect. Just use positive values */
   padding-left: 40px; 
   padding-right: 20px;
   padding-bottom: 30px;
-  width: 570px;
+  min-width: 570px;
   height: auto;
   background-color: rgba(170, 170, 170, 0.5);
   box-shadow: 2px 2px 5px  #0c4510;
   position: absolute; /* Use 'absolute' positioning */
-}
+} 
+
 
 .leftSquare {
   left: 0;
-  margin-left: 20px; /* Add margin to the left of the left square */
-}
+  margin-left: 20px; 
+} 
 
 .rightSquare {
   right: 0;
-  margin-right: 20px; /* Add margin to the left of the left square */
+  margin-right: 20px; 
+} 
+
+.square {
+  padding-top: 30px; /* Negative padding won't have any effect. Just use positive values */
+  padding-left: 40px; 
+  padding-right: 20px;
+  padding-bottom: 30px;
+  max-width: 570px;
+  height: auto;
+  background-color: rgba(170, 170, 170, 0.5);
+  box-shadow: 2px 2px 5px  #0c4510;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
+
+.video-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 
 .textInsideSquare {
   color: black;          
   padding-left: 20px;          /* Spacing around the text */
   text-align: center;     /* Center the text horizontally */
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;           /* flex properties will vertically center the text */
 }
 
 .videoContainer {
@@ -405,6 +440,14 @@ video, iframe {
   display: flex;
   justify-content: center;
 }
+
+.videoFlexContainer {
+  display: flex;
+  flex-wrap: wrap; /* This allows the containers to wrap to the next line */
+  justify-content: space-between; /* Spacing between the two video boxes */
+}
+
+/****RESOURCES****/
 
 
 .image-container img {
@@ -522,8 +565,6 @@ hr.solid {
 .bodyResource {
   background-color: #f0f3fa;
 }
-
-
 
 
 .back-button {
