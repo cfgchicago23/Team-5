@@ -55,6 +55,10 @@ hr {
   border-radius: 20px;
 }
 
+#landing{
+  width: 70%;
+  height: 70%;
+}
 
 /* Minimum aspect ratio */
 @media (min-aspect-ratio: 3/4) {
@@ -124,8 +128,8 @@ hr {
 	margin: 0px;
 	padding: 0px;
 }
-html, body {
-	font-family: sans-serif, arial;
+html, body, main {
+	font-family: Times, "Times New Roman", serif;
 	font-size: 15px;
 }
 .container {
@@ -216,15 +220,12 @@ html, body {
 }
 
 #current-events-button{
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 15px;
+
   background-color: white;
 }
 #past-events-button{
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 15px;
   background-color:#f0f3fa;
 }
 
