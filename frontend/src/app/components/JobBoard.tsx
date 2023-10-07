@@ -4,29 +4,29 @@ import '../globals.css';
 const JobBoard = () => {
   
   function showPastEvents(){
-      const events = document.getElementById('recent-event-id') as HTMLElement;
-      events.setAttribute("style", "display:none; ");
+
+    const events = document.getElementById('recent-event-id') as HTMLElement;
+      events.setAttribute("style", "display:none;");
+      const past = document.getElementById('past-event-id') as HTMLElement;
+      past.setAttribute("style", "display:block;");
 
       const currentButton = document.getElementById('current-events-button') as HTMLElement;
       currentButton.setAttribute("style", "background-color: #f0f3fa; "); 
 
-      const past = document.getElementById('past-event-id') as HTMLElement;
-      past.setAttribute("style", "display:block;");
-
       const pastButton = document.getElementById('past-events-button') as HTMLElement;
       pastButton.setAttribute("style", "background-color:white; ");
-    
+
   }
 
   function showCurrentEvents(){
+
       const events = document.getElementById('recent-event-id') as HTMLElement;
       events.setAttribute("style", "display:block;");
+      const past = document.getElementById('past-event-id') as HTMLElement;
+      past.setAttribute("style", "display:none;");
 
       const currentButton = document.getElementById('current-events-button') as HTMLElement;
       currentButton.setAttribute("style", "background-color: white; "); 
-
-      const past = document.getElementById('past-event-id') as HTMLElement;
-      past.setAttribute("style", "display:none;");
 
       const pastButton = document.getElementById('past-events-button') as HTMLElement;
       pastButton.setAttribute("style", "background-color:#f0f3fa; ");
@@ -44,7 +44,8 @@ const JobBoard = () => {
             <button id="past-events-button"  onClick={showPastEvents}>Past Events</button>
           </div>
         </div>
-        <div id = "recent-event-id" className="recent-event-list">
+        
+          <div id = "recent-event-id" className="recent-event-list">
             <a href="../opportunities/job1">
               <div className='event-1'>
                 <img src = '../images/job-pic1.png' alt='happy volunteers'></img>
@@ -75,6 +76,7 @@ const JobBoard = () => {
    
               </div>
         </div>
+
         <div id = 'past-event-id'  className="recent-event-list">
         <div className='event-1'>
                 <img src = '../images/job-pic4.jpg' alt='happy volunteers'></img>

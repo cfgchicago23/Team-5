@@ -217,10 +217,19 @@ html, body, main {
 }
 
 #current-events-button{
+  padding: 30px;
+}
+#past-events-button{
+  padding: 30px;
+}
+
+#past-event-id{
+  display:none;
   padding: 15px;
 
   background-color: white;
 }
+
 #past-events-button{
   padding: 15px;
   background-color:#f0f3fa;
@@ -329,6 +338,16 @@ html, body, main {
 
 /****RESOURCES****/
 
+.past-events{
+  margin-left: 20px;
+}
+
+.current-events{
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+
 .resourcesContainer {
   display:flex;
   flex-direction: column;
@@ -424,6 +443,12 @@ html, body, main {
 }
 
 .video-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video-containerTwo {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
