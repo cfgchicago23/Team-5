@@ -5,8 +5,8 @@ import '../globals.css';
 const Resources = () => {
 return (
   <main>
-    <Navbar page="resources"/>
      <div className = "bodyResource">
+     <Navbar page="resources"/>
       <div className="resourcesContainer"> 
          <h2 className="title">Rebuilding Aurora 101: What to Know On Your First Day</h2>
          <div className="imageContainer">
