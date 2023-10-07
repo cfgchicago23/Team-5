@@ -303,8 +303,8 @@ html, body {
   object-fit: cover;
 }
 
-.leftSquare, .rightSquare {
-  padding-top: -30px; 
+.leftSquare{
+  padding-top: 30px; 
   padding-left: 30px; 
   padding-right: 30px;
   padding-bottom: 30px;
@@ -316,12 +316,26 @@ html, body {
   position: sticky;  /* or 'sticky' if you want them to scroll with the page */
 }
 
+ .rightSquare {
+  padding-top: 30px; /* Negative padding won't have any effect. Just use positive values */
+  padding-left: 40px; 
+  padding-right: 20px;
+  padding-bottom: 30px;
+  width: 570px;
+  height: auto;
+  background-color: rgba(170, 170, 170, 0.5);
+  box-shadow: 2px 2px 5px  #0c4510;
+  position: absolute; /* Use 'absolute' positioning */
+}
+
 .leftSquare {
   left: 0;
+  margin-left: 20px; /* Add margin to the left of the left square */
 }
 
 .rightSquare {
   right: 0;
+  margin-right: 20px; /* Add margin to the left of the left square */
 }
 
 .textInsideSquare {
@@ -359,8 +373,6 @@ video, iframe {
 
 
 
-  
-  
 
 
 .image-container {
