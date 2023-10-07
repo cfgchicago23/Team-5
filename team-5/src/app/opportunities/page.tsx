@@ -8,6 +8,6 @@ export default function Opportunities() {
       <Navbar page="opportunities"/>
       <JobBoard/>
       This is the Opportunities Page
-    </main>
+    </ma
     )
   }

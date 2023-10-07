@@ -1,4 +1,5 @@
 import '../globals.css';
+import { UserButton , SignInButton,SignUpButton} from "@clerk/nextjs";
 
 <<<<<<< HEAD
 const Navbar = () => {
@@ -43,10 +44,20 @@ function Navbar({ page }: PageName) {
           <a href="feed">Feed</a>
           <a href="resources">Resources</a>
           <a className="active" href="opportunities">Opportunities</a>
+        <UserButton/>
+          <div>
+
+<SignInButton/>
+<SignUpButton/>
+</div>
       </div>
     );
   }
+<<<<<<< HEAD
 >>>>>>> a88cd60bcd66a1912aa330098c861fb541d8df31
+=======
+
+>>>>>>> f63749b692eabaeb006d627e67ea0cafce7b44dd
 };
 
 export default Navbar;
