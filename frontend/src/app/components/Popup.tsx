@@ -12,6 +12,7 @@ const Popup: React.FC<PopupProps> = ({ toggle }) => {
     const [description, setDescription] = useState<string>("")
 
     function convertFile(files: FileList|null) {
+      console.log(files)
       if (files) {
         const fileRef = files[0] || ""
         const fileType: string= fileRef.type || ""
@@ -24,8 +25,6 @@ const Popup: React.FC<PopupProps> = ({ toggle }) => {
     }
 
     const handleSubmit = async () => {
-        console.log(description)
-        console.log(filebase64)
         const postDetails = {
             img: filebase64,
             description: description
