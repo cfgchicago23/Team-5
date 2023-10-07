@@ -6,6 +6,7 @@ const Resources = () => {
 return (
   <main>
      <div className = "bodyResource">
+     <Navbar page="resources" />
       <div className= "resourcesContainer"> 
          <h2 className= "heading-title">Rebuilding Aurora 101: What to Know On Your First Day</h2>
          <div className="imageContainer">
