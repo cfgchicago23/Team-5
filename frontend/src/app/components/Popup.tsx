@@ -81,7 +81,6 @@ const Popup: React.FC<PopupProps> = ({ toggle }) => {
                                 }
 
                                 <hr />
-                                <button> Submit and check the console</button>
                                 </>
                             }
                         </div>

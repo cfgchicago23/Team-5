@@ -1,33 +1,12 @@
 import * as React from 'react'
 import '../globals.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Popup from './Popup';
 import axios from 'axios';
 
 
 // component returns the HTML of all the posts
 const Posts = () => {
-    let placeholder = [
-        {
-            username: "Jane Doe",
-            img: "../images/RTAMembers.jpg", 
-            description: "These columns are beautiful!",
-            postedDate: ""
-        },
-        {
-            username: "John Doe",
-            img: "../images/John.png",
-            description: "Amazing day of Rebuilding",
-            postedDate: ""
-        },
-        {
-            username: "June Doe",
-            img: "../images/cleaning.gif",
-            description: "Today was so fun!",
-            postedDate: ""
-        }
-        
-    ]
     const [seen, setSeen] = useState<boolean>(false)
     function togglePop () {
         setSeen(!seen);
@@ -35,17 +14,18 @@ const Posts = () => {
 
     const [postProps, setPostProps] = useState<Props[]>([])
 
-    try {
-        axios({
-            method: "get",
-            url: "http://127.0.0.1:8080/feed",
-        }).then(response => {
-            setPostProps(response.data);
-        });
-    } catch(e) {
-        console.error('Error uploading file:', e);
-    }
-
+    useEffect(() => {
+        try {
+            axios({
+                method: "get",
+                url: "http://127.0.0.1:8080/feed",
+            }).then(response => {
+                setPostProps(response.data);
+            });
+        } catch(e) {
+            console.error('Error uploading file:', e);
+        }
+    }, [])
   return (
     <div>
         {seen ? <Popup toggle={togglePop}/> : 
