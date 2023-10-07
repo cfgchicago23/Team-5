@@ -1,4 +1,5 @@
 import '../globals.css';
+import { UserButton , SignInButton,SignUpButton} from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -7,7 +8,18 @@ const Navbar = () => {
         <a href="#feed">Feed</a>
         <a href="#resources">Resources</a>
         <a className="active" href="#opportunities">Opportunities</a>
+        <UserButton afterSignOutUrl="/"/>
+
+
+        <div>
+
+<SignInButton/>
+<SignUpButton/>
+</div>
     </div>
+
+  
+
   );
 };
 
